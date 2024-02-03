@@ -1,13 +1,17 @@
 const express = require('express');
 const routes = require('./routes');
 const sequelize = require('./config/connection')
+const bodyparse = require('body-parser')
+const cors = require('cors')
 // import sequelize connection
 
 const app = express();
 const PORT = process.env.PORT || 3002;
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(cors())
+
+app.use(bodyparse.json());
+app.use(bodyparse.urlencoded({ extended: true }));
 
 app.use(routes);
 

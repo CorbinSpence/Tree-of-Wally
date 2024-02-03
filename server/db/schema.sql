@@ -1,0 +1,3 @@
+IF EXISTS DROP DATABASE tow_db;
+
+CREATE DATABASE tow_db;

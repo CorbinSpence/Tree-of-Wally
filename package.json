@@ -1,11 +1,12 @@
 {
   "dependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "cors": "^2.8.5"
   },
   "scripts": {
     "start": "concurrently \"cd server && npm start\" \"cd client && npm start\"",
     "test_front": "cd client && npm start",
-    "test_back": "cd server && npm start"
-
+    "test_back": "cd server && npm start",
+    "seed": "node ./server/seeds/index.js"
   }
 }
